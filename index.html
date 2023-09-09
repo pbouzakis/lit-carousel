@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <script type="module" src="src/app.ts"></script>
+  </head>
+  <style>
+    pbo-carousel {
+      display: flex;
+      height: 250px;
+      width: 400px;
+      flex-flow: row wrap;
+    }
+    
+    pbo-carousel-slides {
+      display: block;
+      margin: 0 auto;
+      height: 200px;
+    }
+
+    pbo-carousel-nav-button {
+      width: 50px;
+      height: 200px;
+      display: block;
+      margin: 0;
+      line-height: 200px;
+      text-align: center; 
+      cursor: pointer;   
+      transition: background-color 0.5s ease;  
+    }
+
+    pbo-carousel-nav-button:hover {
+      background-color: #eee;   
+    }
+
+    pbo-carousel-nav-button:active {
+      background-color: #bed3ff;   
+    }          
+
+    pbo-carousel-pagination {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      display: block;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <pbo-carousel>
+      <pbo-carousel-nav-button action="prev">⬅️</pbo-carousel-nav-button>
+      <pbo-carousel-slides activeindex="0">
+        <img src="http://fpoimg.com/300x200?text=Slide1" />
+        <img src="http://fpoimg.com/300x200?text=Slide2" />
+        <img src="http://fpoimg.com/300x200?text=Slide3" />
+        <img src="http://fpoimg.com/300x200?text=Slide4" />
+        <img src="http://fpoimg.com/300x200?text=Slide5" />
+        <img src="http://fpoimg.com/300x200?text=Slide6" />
+      </pbo-carousel-slides>
+      <pbo-carousel-nav-button action="next">➡️</pbo-carousel-nav-button>
+      <pbo-carousel-pagination />
+    </pbo-carousel>
+  </body>
+</html>
