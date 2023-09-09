@@ -7,8 +7,13 @@ export class PboCarouselNavButton extends LitElement {
   action: string = "next";
 
   static styles = css`
+    :host {
+      cursor: pointer;
+    }
     button {
       all: unset;
+      height: 100%;
+      width: 100%;
     }
   `;
 

@@ -2,6 +2,7 @@ import { LitElement, html, css } from "lit";
 import {
   customElement,
   property,
+  query,
   queryAssignedElements
 } from "lit/decorators.js";
 
@@ -14,13 +15,32 @@ export class PboCarouselSlides extends LitElement {
   _slideImgs!: Array<HTMLElement>;
 
   static styles = css`
+    :host {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .window {
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1000vw;
+      position: absolute;
+      transition: left 0.5s ease;
+    }
+
     ::slotted(img) {
-      display: none;
+      float: left;
+      display: block;
     }
     ::slotted(img.active) {
-      display: inline-block;
+      
     }
   `;
+
+  get _window(): any {
+    return this.renderRoot?.querySelector(".window");
+  }
 
   get _activeElement() {
     const slot = this.shadowRoot?.querySelector("slot");
@@ -58,11 +78,12 @@ export class PboCarouselSlides extends LitElement {
 
   _setActive() {
     this._slideImgs[this.activeindex].classList.add("active");
+    this._window!.style.left = `${this.activeindex * -300}px`;
   }
 
   render() {
     return html`
-      <div>
+      <div class="window">
         <slot>No images provided!</slot>
       </div>
     `;
