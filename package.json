@@ -17,6 +17,7 @@
     "typescript": "5.2.2"
   },
   "dependencies": {
+    "@swc/helpers": "0.5.2",
     "lit": "2.8.0"
   }
 }
