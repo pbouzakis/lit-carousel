@@ -1,3 +1,3 @@
-# Lit, Web Components, Tailwind Hack
+# Lit, Web Components Carousel Hack
 
-Use Lit, Web Components, and TailwindCSS to build a carousel!
+Use Lit and Web Components to build a carousel!
