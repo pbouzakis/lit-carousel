@@ -2,7 +2,7 @@
   "name": "lit-carousel",
   "version": "1.0.0",
   "description": "Hack to play around w/ lit and tailwind.",
-  "main": "index.js",
+  "main": "/src/app.ts",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
